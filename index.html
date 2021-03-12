@@ -63,7 +63,7 @@
 					</div>
 					<div class="form-group">
 						<b><label for="to-input">Price per KM</label></b>
-						<label id="price" class="form-text">5 USD</label>
+						<label id="price" class="form-text">15 Rs</label>
 					</div>
 					<div class="form-group">
 						<b><label for="to-input">Total Price</label></b>
@@ -72,7 +72,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="map"></div>
+		<!--div id="map"></div-->
 		<script>
 		var markers = [];
 		var locations = [];
@@ -160,7 +160,7 @@
 			var end = new google.maps.LatLng(locations[1].lat(), locations[1].lng());
 			var distance=calcDistance(start, end);
 			value_distance.innerHTML=distance;
-			value_price.innerHTML=(distance * 5) + " USD"; // We can use .toFixed()...
+			value_price.innerHTML="₹"+(distance * 15);  // We can use .toFixed()...
 			var bounds = new google.maps.LatLngBounds();
 			bounds.extend(start);
 			bounds.extend(end);
@@ -181,6 +181,6 @@
 			});
 		}
 		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete" async defer></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNKpr4auBLgBgiOXJ41UUWTB58MZa6p3E&libraries=places&callback=initAutocomplete" async defer></script>
 	</body>
 </html>
